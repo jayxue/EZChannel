@@ -1,5 +1,5 @@
 # EZChannel - Android library for eazy creation of YouTube channel apps
------------------------------------------------------------------------
+
 An Android library that helps easily create apps with YouTube channel for users or searches.
 
 ![Demo Screenshot 1](https://github.com/jayxue/EZChannel/blob/master/EZChannel/res/raw/screenshot_1.png)
@@ -32,18 +32,18 @@ In order to utilize this library, you just need to do some configurations withou
 * Import all the three projects into workspace: android-support-v7-support, AndroidViewPageIndicator and EZChannel. You can also get android-support-v7-support from Android SDK. The other one, EZChannelSampleApp, is an app showing how to use this library.
 * In your application, include ```EZChannel``` as library.
 * In your application's ```AndroidManifest.xml```, make sure that you have the following permissions:
-** ```android.permission.INTERNET```
-** ```android.permission.ACCESS_NETWORK_STATE```
-** ```android.permission.ACCESS_WIFI_STATE```
-** ```android.permission.WRITE_EXTERNAL_STORAGE```
-** ```com.android.launcher.permission.INSTALL_SHORTCUT```
+  * ```android.permission.INTERNET```
+  * ```android.permission.ACCESS_NETWORK_STATE```
+  * ```android.permission.ACCESS_WIFI_STATE```
+  * ```android.permission.WRITE_EXTERNAL_STORAGE```
+  * ```com.android.launcher.permission.INSTALL_SHORTCUT```
 * In your application's ```AndroidManifest.xml```, include two activities:
-** ```com.wms.opensource.ezchannel.activity.VideoListFragmentActivity```
-** ```com.wms.opensource.ezchannel.activity.PlayVideoActivity```
+  * ```com.wms.opensource.ezchannel.activity.VideoListFragmentActivity```
+  * ```com.wms.opensource.ezchannel.activity.PlayVideoActivity```
 * In your applications' ```res/values/strings.xml```,
-** Set ```appID``` (no space or special characters);
-** Set ```YouTubePlaylistID``` if you want videos of a YouTube user, or ```YouTubeQueryTerm``` if you want videos based on a query term. See comments in EZChannel/res/values/strings.xml for details.
-** Set ```AndroidApplicationKey``` in order to access YouTube API (you also need to set this if you want to try the demo app). See comments in EZChannel/res/values/strings.xml for details.
+  * Set ```appID``` (no space or special characters);
+  * Set ```YouTubePlaylistID``` if you want videos of a YouTube user, or ```YouTubeQueryTerm``` if you want videos based on a query term. See comments in EZChannel/res/values/strings.xml for details.
+  * Set ```AndroidApplicationKey``` in order to access YouTube API (you also need to set this if you want to try the demo app). See comments in EZChannel/res/values/strings.xml for details.
 * You may override ```NUMBER_OF_VIDEOS_PER_PAGE``` in ```res/values/integers.xml``` of your application to adjust how many videos to show on each page.
 * You may override ```MAX_PAGE_COUNT``` in ```res/values/integers.xml``` of your application to adjust the maximal number of pages allowed in your application.
 
