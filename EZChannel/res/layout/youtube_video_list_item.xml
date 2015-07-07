@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2015 Waterloo Mobile Studio. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:universalmate="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+    
+    <!-- ListRow Left side Thumbnail image -->
+    <ImageView
+            android:id="@+id/imageViewThumbnail"
+            android:contentDescription="@string/app_name"
+            android:background="@drawable/image_border"
+            android:layout_width="160dip"
+            android:layout_height="90dip"
+        	android:layout_alignParentLeft="true"
+        	android:layout_alignParentStart="true"
+        	android:layout_marginRight="5dp"
+        	android:layout_marginEnd="5dp"
+        	android:layout_marginTop="2dp"            
+            android:src="@drawable/youtube_video_place_holder" />
+    
+    <!-- Rightend Arrow -->
+    <ImageView
+        android:id="@+id/imageViewArrow"
+        android:contentDescription="@string/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/arrow_right" />
+    <!-- Collection-->
+
+    <TextView
+        android:id="@+id/textViewPublishTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/imageViewArrow"
+        android:layout_toStartOf="@+id/imageViewArrow"
+        android:layout_toRightOf="@+id/imageViewThumbnail"
+        android:layout_toEndOf="@+id/imageViewThumbnail"
+        android:layout_alignTop="@+id/imageViewThumbnail"    
+        android:textColor="#040404"
+        android:textSize="12sp"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/imageViewArrow"
+        android:layout_toStartOf="@+id/imageViewArrow"
+        android:layout_toRightOf="@+id/imageViewThumbnail"
+        android:layout_toEndOf="@+id/imageViewThumbnail"
+        android:layout_below="@+id/textViewPublishTime"
+        android:paddingBottom="5dp"        
+        android:textColor="#3D3D3D"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <!-- Collection description-->
+
+	<ScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/imageViewThumbnail"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentStart="true"
+	    android:layout_alignRight="@+id/textViewTitle"
+	    android:layout_alignEnd="@+id/textViewTitle"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"	    
+	    android:scrollbars="none" >
+	 
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	  
+	        <com.wms.opensource.ezchannel.view.ExpandablePanel
+	            android:id="@+id/expandablePanelVideoDescription"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            universalmate:animationDuration="500"
+	            universalmate:collapsedHeight="30dip"
+	            universalmate:content="@+id/value"
+	            universalmate:handle="@+id/expand" >
+	 
+	            <RelativeLayout
+	                android:layout_width="fill_parent"
+	                android:layout_height="match_parent" >
+	 
+	                <TextView
+	                    android:id="@id/value"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content"
+	                    android:textColor="#343434"
+        				android:textSize="13sp"
+        				android:fadingEdge="horizontal" />
+	 
+	                <ImageButton
+	                    android:id="@id/expand"
+	                    android:contentDescription="@string/expand"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentRight="true"
+	                    android:layout_alignParentEnd="true"
+	                    android:layout_below="@id/value"
+	            		android:background="@android:color/transparent"
+	            		android:scaleType="centerInside"
+	            		android:src="@drawable/arrow_down"/>
+	            </RelativeLayout> 
+			</com.wms.opensource.ezchannel.view.ExpandablePanel>
+	    </LinearLayout>
+	 
+	</ScrollView>
+	
+</RelativeLayout> 

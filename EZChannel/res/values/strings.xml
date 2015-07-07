@@ -1,0 +1,71 @@
+<!--
+  Copyright 2015 Waterloo Mobile Studio. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<resources>
+
+    <string name="app_name">EZChannel</string>
+ 
+    <!-- appID will be used in file names. Make sure to avoid space and special characters in it. -->
+    <string name="appID">EZChannel</string>
+    
+    <string name="loadingVideos">Loading videos&#8230;</string>
+    <string name="noNetworkAvailable">No network available. You will be unable to get latest information.</string>
+    <string name="error">Error</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="playVideoActivityTitle">Play Video</string>
+    <string name="loadVideoInfoFailed">Load Video Info Failed</string>
+    <string name="contactAppProducer">Please contact app producer for resolving the problem.</string>
+    <string name="confirmReloadVideos">New videos found. Do you want to reload videos?</string>
+    <string name="expand">Expand</string>
+    <string name="thumbnail">Thumbnail</string>
+
+    <!-- CharSet (encoding) of text files. It can be GB2312, BIG5, or UTF-8. -->
+    <string name="charSetName">UTF-8</string>
+    
+    <!-- File name -->
+    <string name="YouTubeVideosCountFileName">YouTubeVideosCount.txt</string>	
+    
+    <!-- YouTube related info. Needs to be customized for each app -->
+	<!--
+		Playlist ID of the YouTube user. This must be provided for an app based on EZChannel.
+    	To get the playlist ID of a YouTube user, go to https://developers.google.com/youtube/v3/docs/channels/list. In the "Try it!" section,
+    	enter "contentDetails" for the "part" field and enter a user name for the "forUsername" field. In the response, you can find the ID of
+    	the "uploads" channel of this user. 
+		For example, the response is something like:
+     		"contentDetails": {
+	 			"relatedPlaylists": {
+     				"likes": "LL4zccsgn1Nys_sIcOYd2fTw",
+     				"uploads": "UU4zccsgn1Nys_sIcOYd2fTw"
+     			},
+     			"googlePlusUserId": "113813076890051346066"
+	 		}
+		Here "uploads":"UU4zccsgn1Nys_sIcOYd2fTw" is what you need to put here.
+    -->
+    <string name="YouTubePlaylistID"></string>
+
+    <!-- This is the query string userd for searching on YouTube. You need to make sure that YouTubePlaylistID is empty if you want to make a channel based on search. -->
+    <string name="YouTubeQueryTerm"></string>
+    
+	<!-- 
+		To get the application key, go to Google Developers Console (https://console.developers.google.com) and create a project for your application.
+		In APIs & auto | APIs, enable YouTube Data API v3. Then, in APIs & auth | Credentials, create a new key (select Android key from available options)
+		for for Public API access. You don't need to enter any certificate fineprint and package anme, therefore this key can accept requests from any
+		Android application.
+		After the key is created, put the API key here.
+	-->
+    <string name="AndroidApplicationKey"></string>
+
+</resources>
