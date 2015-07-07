@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Waterloo Mobile Studio. All Rights Reserved.
+ * Copyright 2015 Waterloo Mobile Studio
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 package com.wms.opensource.ezchannel.dialog;
 
 import com.wms.opensource.ezchannel.R;
-import com.wms.opensource.ezchannel.listener.ConfirmReloadVideosDialogBuilderOnClickListener;
+import com.wms.opensource.ezchannel.listener.ConfirmReloadListener;
 import com.wms.opensource.ezchannel.youtube.YouTubeVideoSource;
 
 import android.app.AlertDialog.Builder;
@@ -32,7 +32,7 @@ public class ConfirmReloadVideosDialogBuilder extends Builder {
 		this.setCancelable(false);
 		this.setMessage(context.getString(R.string.confirmReloadVideos));
 		this.setNegativeButton(context.getString(R.string.cancel), null);
-		this.setPositiveButton(context.getString(R.string.yes), new ConfirmReloadVideosDialogBuilderOnClickListener(context, handler, youtubeVideoSource, playlistID));		
+		this.setPositiveButton(context.getString(R.string.yes), new ConfirmReloadListener(context, handler, youtubeVideoSource, playlistID));		
 	}
 
 }

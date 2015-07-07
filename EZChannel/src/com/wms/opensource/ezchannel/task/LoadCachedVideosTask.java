@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Waterloo Mobile Studio. All Rights Reserved.
+ * Copyright 2015 Waterloo Mobile Studio
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -41,7 +41,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.ProgressBar;
 
-public class LoadVideosFromLocalTask extends AsyncTask<Integer, Void, Void> {
+public class LoadCachedVideosTask extends AsyncTask<Integer, Void, Void> {
 
 	private Context context = null;
 	private ProgressBar progressBar = null;
@@ -52,7 +52,7 @@ public class LoadVideosFromLocalTask extends AsyncTask<Integer, Void, Void> {
 	
 	private List<YouTubeVideo> videos = new ArrayList<YouTubeVideo>();
 	
-	public LoadVideosFromLocalTask(Context context, Handler handler, YouTubeVideoSource videoSource, ProgressBar progressBar, String playlistID, int page) {
+	public LoadCachedVideosTask(Context context, Handler handler, YouTubeVideoSource videoSource, ProgressBar progressBar, String playlistID, int page) {
 		this.context = context;
 		this.handler = handler;
 		this.videoSource = videoSource;

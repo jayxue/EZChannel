@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Waterloo Mobile Studio. All Rights Reserved.
+ * Copyright 2015 Waterloo Mobile Studio
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ import java.util.List;
 import com.wms.opensource.ezchannel.R;
 import com.wms.opensource.ezchannel.adapter.VideoArrayAdapter;
 import com.wms.opensource.ezchannel.handler.HandlerMessage;
-import com.wms.opensource.ezchannel.task.LoadVideosFromLocalTask;
+import com.wms.opensource.ezchannel.task.LoadCachedVideosTask;
 import com.wms.opensource.ezchannel.task.LoadVideosTask;
 import com.wms.opensource.ezchannel.type.NetworkStatus;
 import com.wms.opensource.ezchannel.util.FileUtil;
@@ -67,7 +67,7 @@ public class VideoListFragment extends Fragment {
 	private ProgressBar progressBar = null;
 	
 	private LoadVideosTask loadVideosTask = null;
-	private LoadVideosFromLocalTask loadPlaylistVideosFromLocalTask = null;
+	private LoadCachedVideosTask loadPlaylistVideosFromLocalTask = null;
 	
 	private LoadVideosHandler loadVideosHandler = new LoadVideosHandler();
 	
@@ -147,7 +147,7 @@ public class VideoListFragment extends Fragment {
         	
 	    	boolean videosFileExists = FileUtil.fileExist(videosFilePath);            
 	    	if(videosFileExists) {
-    			loadPlaylistVideosFromLocalTask = new LoadVideosFromLocalTask(getActivity(), loadVideosHandler, VideoListFragmentActivity.videoSource, progressBar, playlistID, page);
+    			loadPlaylistVideosFromLocalTask = new LoadCachedVideosTask(getActivity(), loadVideosHandler, VideoListFragmentActivity.videoSource, progressBar, playlistID, page);
     			loadPlaylistVideosFromLocalTask.execute();
 	    	}
 	    	else {

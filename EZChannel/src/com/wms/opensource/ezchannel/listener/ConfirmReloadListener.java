@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Waterloo Mobile Studio. All Rights Reserved.
+ * Copyright 2015 Waterloo Mobile Studio
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,14 +30,14 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.os.Handler;
 
-public class ConfirmReloadVideosDialogBuilderOnClickListener implements OnClickListener {
+public class ConfirmReloadListener implements OnClickListener {
 
 	Context context = null;
 	Handler handler = null;
 	YouTubeVideoSource videoSource = YouTubeVideoSource.Playlist;
 	String loadCriteria = "";
 	
-	public ConfirmReloadVideosDialogBuilderOnClickListener(Context context, Handler handler, YouTubeVideoSource videoSource, String loadCriteria) {
+	public ConfirmReloadListener(Context context, Handler handler, YouTubeVideoSource videoSource, String loadCriteria) {
 		this.context = context;
 		this.handler = handler;
 		this.videoSource = videoSource;
