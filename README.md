@@ -1,5 +1,5 @@
 # EZChannel - Android library for eazy creation of YouTube channel apps
-================================
+-----------------------------------------------------------------------
 An Android library that helps easily create apps with YouTube channel for users or searches.
 
 ![Demo Screenshot 1](https://github.com/jayxue/EZChannel/blob/master/EZChannel/res/raw/screenshot_1.png)
