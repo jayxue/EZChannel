@@ -9,7 +9,7 @@ An Android library that helps easily create apps with YouTube channel for users 
 ![Demo Screenshot 5](https://github.com/jayxue/EZChannel/blob/master/EZChannel/res/raw/screenshot_5.png)
 
 Check EZChannel Demo application on GooglePlay:<br />
-<a target="_blank" href="https://play.google.com/store/apps/details?id=com.wms.opensource.ezchannel.demo">
+<a target="_blank" href="https://play.google.com/store/apps/details?id=com.wsm.opensource.ezchannel.demo">
   <img alt="Get it on Google Play" src="https://github.com/jayxue/EZChannel/blob/master/EZChannel/res/raw/google_play.png" />
 </a>
 
