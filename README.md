@@ -40,7 +40,7 @@ In order to utilize this library, you just need to do some configurations withou
 * In your application's ```AndroidManifest.xml```, include two activities:
   * ```com.wms.opensource.ezchannel.activity.VideoListFragmentActivity```
   * ```com.wms.opensource.ezchannel.activity.PlayVideoActivity```
-* In your applications' ```res/values/strings.xml```,
+* In your application's ```res/values/strings.xml```,
   * Set ```appID``` (no space or special characters).
   * Set ```YouTubePlaylistID``` if you want videos of a YouTube user, or ```YouTubeQueryTerm``` if you want videos based on a query term. See comments in EZChannel/res/values/strings.xml for details.
   * Set ```AndroidApplicationKey``` in order to access YouTube API (you also need to set this if you want to try the demo app). See comments in EZChannel/res/values/strings.xml for details.
